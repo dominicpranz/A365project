@@ -25,30 +25,98 @@
 
 <body>
 
-  <h1>Test</h1>
-
-  <button type="button" class="btn btn-primary">Primary</button>
-
-  <!-- Slider main container -->
-  <div class="swiper-container">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      ...
+  <!--Navbar -->
+  <nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555" aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+      </ul>
+      <!--ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item avatar">
+        </li>
+      </ul-->
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
+  </nav>
+  <!--/.Navbar -->
 
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+  <section>
+    <h1>Test</h1>
 
-    <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
-  </div>
+    <button type="button" class="btn btn-primary">Primary</button>
+  </section>
+  <section>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </section>
+  <section>
+    <video controls autoplay loop muted poster="" width="250">
+      <source src="assets/media/flower.mp4" type="video/mp4">
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+  </section>
+  <section>
+    <form action="" method="" id="form">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name" required minlength="2">
+      </div>
+      <div>
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="user_email">
+      </div>
+      <div>
+        <label for="msg">Message:</label>
+        <textarea id="msg" name="user_message"></textarea>
+      </div>
+      <button type="submit">Send your message</button>
+    </form>
+    <p class="form-message">
+
+    </p>
+  </section>
+  <section>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">&copy; <span id="current-year"></span> Copyright:
+      <a href="https://dominicpranz.github.io/">Dominic Pranz</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
 
   <!-- JQuery -->
   <!--script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script-->
