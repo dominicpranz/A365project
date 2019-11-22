@@ -12,7 +12,7 @@ One-Page Website
 - 4er grid (desktop 4 -> tablet 2 -> mobile 1)
 - formular (name, nachname, email) mit ajax request an php + captcha v2/v3
 - mind. 1 CSS3 Keyframe Animation
-- Google mit mit marker / label
+- Google Map mit mit marker / label
 - video mit youtube api mit eigenen steuerelementen
 - keine 3rd party js plugins
 - weitere features werden in diesem file erklärt
