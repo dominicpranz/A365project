@@ -16,3 +16,4 @@ One-Page Website
 - video mit youtube api mit eigenen steuerelementen
 - keine 3rd party js plugins
 - weitere features werden in diesem file erklärt
+- fragen / rückmeldung an digital@a365.at oder +43 662 23 07 61-24
