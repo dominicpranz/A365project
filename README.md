@@ -1,5 +1,8 @@
 # A365project
 
+- when cloning this project run "npm install" to install the dependencies of the project
+- if needed get npm here https://nodejs.org/en/
+
 One-Page Website
 
 - header mit

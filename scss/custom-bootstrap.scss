@@ -1,0 +1,17 @@
+// customize bootstrap defaults in this file
+// https://getbootstrap.com/docs/4.0/getting-started/theming/
+
+// overwrite bootstrap default variables BELOW THIS LINE from bootstrap/scss/_variables.scss
+
+
+
+// we could include only the parts we actually use here, but we use the whole package because it is a dependency of mdb
+@import "../node_modules/bootstrap/scss/bootstrap"; // to get this run npm install bootstrap
+
+// overwrite mdbootstrap default variables BELOW THIS LINE from mdbootstrap/scss/core/_variables.scss
+
+$roboto-font-path: "../assets/fonts/roboto/"; // we could also use "../node_modules/mdbootstrap/font/roboto/" but we don't want node_modules as live dependency
+
+
+
+@import "../node_modules/mdbootstrap/scss/mdb-free"; // to get this run npm install mdbootstrap

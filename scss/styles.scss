@@ -1,5 +1,21 @@
 /* styles */
 
+// change bootstrap default variables here
+
+// https://mdbootstrap.com/docs/jquery/layout/media-queries/
+/*$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);*/
+
+// include the required bootstrap files again in order to use the default breakpoints. this DOES NOT generate css by itself
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
 .swiper-container {
     width: 600px;
     height: 300px;
@@ -8,4 +24,22 @@
         background-color: green;
       }
     }
+}
+
+.main-section {
+  min-height: 60vh;
+  .form-wrapper {
+    max-width: 70%;
+    margin: auto;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 3rem;
+  }
+}
+
+// breakpoint example
+@include media-breakpoint-up(sm) {
+  body {
+    background-color: lightgreen;
+  }
 }
