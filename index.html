@@ -21,171 +21,265 @@
   <link href="css/styles.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar-header" class="position-relative">
 
-  <!--Navbar -->
-  <nav class="mb-1 navbar navbar-expand-lg navbar-dark bg-success lighten-1">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555" aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-      </ul>
-      <!--ul class="navbar-nav ml-auto nav-flex-icons">
-        <li class="nav-item avatar">
-        </li>
-      </ul-->
-    </div>
-  </nav>
-  <!--/.Navbar -->
-
-  <section class="main-section">
-    <h1>Test</h1>
-
-    <button type="button" class="btn btn-primary">Primary</button>
-  </section>
-
-  <section class="main-section">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
+  <!-- Main navigation -->
+  <header>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="navbar-header">
+      <div class="container">
+        <a class="navbar-brand" href="#"><strong>YourBrand.com</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#video">Video</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
-    </div>
-  </section>
-
-  <section class="main-section">
-    <video controls autoplay loop muted poster="" width="250">
-      <source src="assets/media/flower.mp4" type="video/mp4">
-      Sorry, your browser doesn't support embedded videos.
-    </video>
-  </section>
-
-  <section class="main-section">
-    <form action="" method="" id="form">
-      <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="user_name" required minlength="2">
-      </div>
-      <div>
-        <label for="mail">E-mail:</label>
-        <input type="email" id="mail" name="user_email">
-      </div>
-      <div>
-        <label for="msg">Message:</label>
-        <textarea id="msg" name="user_message"></textarea>
-      </div>
-      <button type="submit">Send your message</button>
-    </form>
-    <p class="form-message">
-
-    </p>
-  </section>
-
-  <section class="main-section main-section-form">
-
-    <div class="form-wrapper">
-
-      <!--Section: Contact v.2-->
-      <section class="mb-4">
-
-        <!--Section heading-->
-        <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
-        <!--Section description-->
-        <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-          a matter of hours to help you.</p>
-
-        <div class="row">
-
-          <!--Grid column-->
-          <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-
-              <!--Grid row-->
-              <div class="row">
-
-                <!--Grid column-->
-                <div class="col-md-6">
-                  <div class="md-form mb-0">
-                    <input type="text" id="name" name="name" class="form-control">
-                    <label for="name" class="">Your name</label>
-                  </div>
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-md-6">
-                  <div class="md-form mb-0">
-                    <input type="text" id="email" name="email" class="form-control">
-                    <label for="email" class="">Your email</label>
-                  </div>
-                </div>
-                <!--Grid column-->
-
+    </nav>
+    <!-- Navbar -->
+    <!-- Full Page Intro -->
+    <div class="full-page-intro view" style="">
+      <video loop muted autoplay poster="assets/img/blurry-lights.jpg" class="parallax-video">
+        <source src="assets/media/blurry-lights.mp4" type="video/mp4">
+      </video>
+      <!-- Mask & flexbox options-->
+      <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+        <a class="scroll-down-arrow" href="#about"></a>
+        <!-- Content -->
+        <div class="container">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="full-page-intro__content col-md-12 mb-4 white-text text-center">
+              <h1 class="main-quote title h1-reponsive white-text mb-0 pt-md-5 pt-5 fadeInDown"><span class="main-quote__creativity">Creativity</span><br /><span class="main-quote__intelligence">is
+                  intelligence</span><br /><span class="main-quote__fun">having fun</span></h1>
+              <div class="below-quote">
+                <hr class="hr-light my-4 fadeInDown mx-auto">
+                <h5 class="text-uppercase mb-4 white-text fadeInDown"><strong>We create memorable experiences</strong></h5>
+                <a class="cta-button btn fadeInDown" href="#about">Find out how</a>
+                <a class="cta-button btn fadeInDown" href="#contact">Get in touch</a>
               </div>
-              <!--Grid row-->
-
-              <!--Grid row-->
-              <div class="row">
-
-                <!--Grid column-->
-                <div class="col-md-12">
-
-                  <div class="md-form">
-                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                    <label for="message">Your message</label>
-                  </div>
-
-                </div>
-              </div>
-              <!--Grid row-->
-
-            </form>
-
-            <div class="text-center text-md-left">
-              <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
             </div>
-            <div class="status"></div>
+            <!--Grid column-->
           </div>
-          <!--Grid column-->
+          <!--Grid row-->
+        </div>
+        <!-- Content -->
+      </div>
+      <!-- Mask & flexbox options-->
+    </div>
+    <!-- Full Page Intro -->
+  </header>
+  <!-- Main navigation -->
+
+  <section class="main-section" id="about">
+
+    <div class="about-wrapper">
+      <div class="row">
+        <div class="col-md-5 m-auto p-5">
+
+          <div class="view">
+            <img src="assets/svg/undraw_design_feedback_dexe.svg" class="img-fluid" alt="design feedback">
+          </div>
 
         </div>
+        <div class="col-md-5 m-auto d-flex align-items-center dark-grey-text p-5">
+          <div>
 
-      </section>
-      <!--Section: Contact v.2-->
+            <h3 class="font-weight-bold mb-4">We create designs that work for you</h3>
 
+            <p>Lorem ipsum dolor sit amet consectetur adip elit. Maiores deleniti explicabo voluptatem quisquam nulla asperiores aspernatur aperiam voluptate et consectetur minima delectus, fugiat eum soluta blanditiis adipisci, velit dolore magnam.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-5 m-auto d-flex align-items-center dark-grey-text p-5">
+          <div>
+
+            <h3 class="font-weight-bold mb-4">..and think outside of the box</h3>
+
+            <p>Lorem ipsum dolor sit amet consectetur adip elit. Maiores deleniti explicabo voluptatem quisquam nulla asperiores aspernatur aperiam voluptate et consectetur minima delectus, fugiat eum soluta blanditiis adipisci, velit dolore magnam.
+            </p>
+
+          </div>
+        </div>
+        <div class="col-md-5 m-auto p-5">
+
+          <div class="view">
+            <img src="assets/svg/undraw_new_ideas_jdea.svg" class="img-fluid" alt="">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="main-section" id="projects">
+
+    <div class="projects-wrapper px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-lg-8 text-center">
+
+          <h3 class="font-weight-bold mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+
+          <!--Image-->
+          <div class="view">
+            <div class="swiper-container" style="display:none;">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
+            </div>
+          </div>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </div>
+
+  </section>
+
+  <section class="main-section" id="video">
+
+    <!--video controls autoplay loop muted poster="" width="250">
+      <source src="assets/media/flower.mp4" type="video/mp4">
+      Sorry, your browser doesn't support embedded videos.
+    </video-->
+
+  </section>
+
+  <!--section class="main-section">
+
+
+  </section-->
+
+  <section class="main-section" id="contact">
+
+    <div class="row">
+      <!--Contact wrapper-->
+      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-stretch p-2 my-4 col-11 col-md-9 mx-auto">
+
+        <!--Contact wrapper-item-->
+        <div class="contact-wrapper__item p-2 col-lg-5 p-2 mb-4 mb-lg-0">
+
+          <!--Section heading-->
+          <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+          <!--Section description-->
+          <p class="text-center w-responsive mx-auto mb-5">Do you have any questions?</p>
+
+          <form id="contact-form" name="contact-form" action="" method="">
+
+            <!--Grid row-->
+            <div class="row">
+
+              <!--Grid column-->
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input type="text" id="name" name="name" class="form-control" required>
+                  <label for="name">Your name</label>
+                </div>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input type="email" id="email" name="email" class="form-control" required>
+                  <label for="email">Your email</label>
+                </div>
+              </div>
+              <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+            <!--Grid row-->
+            <div class="row">
+              <div class="col-12">
+
+                <div class="md-form">
+                  <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                  <label for="message">Your message</label>
+                </div>
+
+              </div>
+            </div>
+            <!--Grid row-->
+
+            <!--Grid row-->
+            <div class="row">
+              <div class="mx-auto mx-md-0 mb-4">
+                <button type="submit" class="submit-button btn btn-primary"><i class="fas fa-paper-plane fa mr-2"></i>Send</button>
+                <div class="submit-spinner spinner-grow text-primary" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+              <div class="status"></div>
+            </div>
+            <!--Grid row-->
+
+            <p class="form-message"></p>
+
+          </form>
+
+        </div>
+        <!--Contact wrapper-item-->
+
+        <!--Contact wrapper-item-->
+        <div class="contact-wrapper__item border col-12 col-lg-5 p-0">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2679.3695395763507!2d13.042881915826134!3d47.81305588168601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47769078f3c7634f%3A0xfb02fe56aad5409c!2sSalzburg!5e0!3m2!1sen!2sat!4v1574670389107!5m2!1sen!2sat"
+            width="" height="" frameborder="0" style="border:0;" allowfullscreen="" id="map"></iframe>
+        </div>
+        <!--Contact wrapper-item-->
+
+      </div>
+      <!--Contact wrapper-->
     </div>
 
   </section>
 
   <!-- Footer -->
-  <footer class="page-footer font-small blue">
+  <footer class="page-footer font-small primary-color">
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">&copy; <span id="current-year"></span> Copyright:
-      <a href="https://dominicpranz.github.io/">Dominic Pranz</a>
+    <div class="footer-copyright text-center py-3">
+      <div class="">&copy; <span id="current-year"></span> Copyright | Coded with <i class="fas fa-heart red-text mx-1"></i> by <a target="_blank" href="https://dominicpranz.github.io/">Dominic Pranz</a></div>
     </div>
     <!-- Copyright -->
 

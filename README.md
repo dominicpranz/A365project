@@ -3,6 +3,12 @@
 - when cloning this project run "npm install" to install the dependencies of the project
 - if needed get npm here https://nodejs.org/en/
 
+Ressources used
+
+- https://mdbootstrap.com/
+- https://slidesjs.com/
+- https://undraw.co/
+
 One-Page Website
 
 - header mit

@@ -39,20 +39,46 @@ $(document).ready(function() {
 
   });
 
+  // make link jumps scroll smooth
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      let offsetPosition = 0; // scroll to top if empty #
+      let selector = this.getAttribute('href');
+      if (selector !== '#') {
+        let element = document.querySelector(selector);
+        if (!element) return; // break if element doesn't exist to prevent a js error
+        let elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+        let headerHeight = 50; // normally document.querySelector("nav.navbar").offsetHeight but our header changes height so we use a fixed value
+        offsetPosition = elementPosition - headerHeight; // take header height into account
+      }
+
+      // element.scrollIntoView({ behavior: 'smooth'});
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    });
+  });
 
   // calculate year automatically
   let currentYear = new Date().getFullYear();
   $('#current-year').text(currentYear);
 
   // handle form submission
-  $('#form').submit((e) => {
+  $('#contact-form').submit((e) => {
     e.preventDefault();
-    let formdata = {};
-    formdata['name'] = $('#form input[name="user_name"]').val();
-    formdata['email'] = $('#form input[name="user_email"]').val();
-    formdata['message'] = $('#form textarea[name="user_message"]').val();
 
-    console.log(formdata);
+    $('.submit-button').hide();
+    $('.submit-spinner').show();
+
+    let formdata = {};
+    formdata['name'] = $('input[name="name"]').val();
+    formdata['email'] = $('input[name="email"]').val();
+    formdata['message'] = $('textarea[name="message"]').val();
+
+    // console.log(formdata);
 
     var jqxhr = $.ajax({
       type: 'POST',
@@ -60,28 +86,50 @@ $(document).ready(function() {
       data: formdata, //JSON.stringify(formdata),
     });
 
-
     jqxhr.done((data) => {
-      console.log('done');
-      let answer = JSON.parse(data);
-      console.log(answer);
-      writeFormMessage(answer['message'], false);
+      console.log(data);
+      let dataObj = isJsonString(data) ? JSON.parse(data) : null;
+      if (dataObj && 'code' in dataObj && 'message' in dataObj) {
+        let hasError = (dataObj['code'] !== 200);
+        writeFormMessage(dataObj['message'], hasError);
+      } else {
+        console.error(data);
+        writeFormMessage('Sorry, something went wrong.', true);
+      }
     });
 
     jqxhr.fail((error) => {
-      console.log('error');
       console.error(error);
+      writeFormMessage('Sorry, something went wrong.', true);
+    });
+
+    jqxhr.always((error) => {
+      $('.submit-spinner').hide();
+      $('.submit-button').show();
     });
 
   });
 
-  function writeFormMessage(message, error) {
+  // returns a boolean. checks whether the given string is in json format
+  function isJsonString(str) {
+    try {
+      JSON.parse(str);
+    } catch (e) {
+      return false;
+    }
+    return true;
+  }
+
+  // write a feedback message to the user after submitting the form
+  function writeFormMessage(message, hasError) {
     let formMessageEl = $('.form-message');
-    formMessageEl.text(message);
-    if (error) {
-      formMessageEl.addClass('error');
+    formMessageEl.html(message);
+    if (hasError) {
+      formMessageEl.addClass('text-warning');
+      formMessageEl.removeClass('text-success');
     } else {
-      formMessageEl.removeClass('error');
+      formMessageEl.addClass('text-success');
+      formMessageEl.removeClass('text-warning');
     }
   }
 
