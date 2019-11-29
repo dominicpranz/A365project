@@ -85,15 +85,21 @@ $(document).ready(function() {
   $('#contact-form').submit((e) => {
     e.preventDefault();
 
-    $('.submit-button').hide();
-    $('.submit-spinner').show();
-
     let formdata = {};
     formdata['name'] = $('input[name="name"]').val();
     formdata['email'] = $('input[name="email"]').val();
     formdata['message'] = $('textarea[name="message"]').val();
+    formdata['g-recaptcha-response'] = grecaptcha ? grecaptcha.getResponse() : null;
 
-    // console.log(formdata);
+    console.log(formdata);
+
+    if (!formdata['g-recaptcha-response'] || formdata['g-recaptcha-response'] === '') {
+      writeFormMessage('Please verify with the captcha.', true);
+      return;
+    }
+
+    $('.submit-button').hide();
+    $('.submit-spinner').show();
 
     var jqxhr = $.ajax({
       type: 'POST',
@@ -102,7 +108,7 @@ $(document).ready(function() {
     });
 
     jqxhr.done((data) => {
-      // console.log(data);
+      console.log(data);
       let dataObj = isJsonString(data) ? JSON.parse(data) : null;
       if (dataObj && 'code' in dataObj && 'message' in dataObj) {
         let hasError = (dataObj['code'] !== 200);

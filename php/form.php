@@ -15,7 +15,18 @@ try {
 
     $formdata = $_POST; // alternatevly you could get the raw data via file_get_contents("php://input") and then urldecode() or json_decode() - POST handles this for us :)
 
-      if ( !empty($formdata['name']) && !empty($formdata['email']) && isset($formdata['message']) ) { // check the data
+      $recaptchaIsValid = false;
+      $captcha = !empty ($formdata['g-recaptcha-response']) ? $formdata['g-recaptcha-response'] : NULL;
+      $captchaResponse = NULL;
+
+      if($captcha) {
+        // handling the captcha and checking if it's ok
+        $secret = "6LfdPMUUAAAAAHLCoIoByDkL8IbGW3vI3_5aWzR5";
+        $captchaResponse = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secret."&response=".$captcha."&remoteip=".$_SERVER["REMOTE_ADDR"]), true);
+        if ($captchaResponse && $captchaResponse["success"] != false) $recaptchaIsValid = true;
+      }
+
+      if ( !empty($formdata['name']) && !empty($formdata['email']) && isset($formdata['message']) && $recaptchaIsValid ) { // check the data
         // process the data from here
 
         // send mail
@@ -30,6 +41,7 @@ try {
         $answer = [
           'code' => 200,
           'message' => "Thank you {$formdata['name']}! We received your message and will get back at you as soon as we can.",
+          // 'captchaResponse' => $captchaResponse,
         ];
       } else {
         $answer = [
