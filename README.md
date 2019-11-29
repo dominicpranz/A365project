@@ -10,7 +10,6 @@ Ressources used
 - https://coverr.co/
 - https://undraw.co/
 - https://unsplash.com/
-- https://compressjpeg.com/
 
 One-Page Website
 
