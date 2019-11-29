@@ -23,8 +23,8 @@ function onYouTubeIframeAPIReady() {
       color: 'white',
     },
     events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
+      //'onReady': onPlayerReady,
+      //'onStateChange': onPlayerStateChange
     }
   });
 }

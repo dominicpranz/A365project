@@ -6,13 +6,18 @@ $(document).ready(function() {
   let mySwiper = new Swiper('.swiper-container', {
     speed: 900,
     spaceBetween: 100,
+    // Disable preloading of all images
+    preloadImages: false,
+    // Enable lazy loading
+    lazy: true,
+    loadOnTransitionStart: true,
 
     // Optional parameters
     direction: 'horizontal',
     //loop: true,
 
     autoplay: {
-      delay: 3000,
+      delay: 5000,
     },
 
     effect: 'coverflow',

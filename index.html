@@ -5,20 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Frontend Web Design">
   <title>A365 Project</title>
 
   <base href="" target="">
 
   <!-- MD Bootstrap CDN https://mdbootstrap.com/md-bootstrap-cdn/ -->
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="preload" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <!-- own custom bootstrap and mdbootstrap -->
   <link href="css/custom-bootstrap.min.css" rel="stylesheet">
   <!-- https://swiperjs.com/ -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="preload" href="https://unpkg.com/swiper/css/swiper.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
   <!-- own styles -->
-  <link href="css/styles.min.css" rel="stylesheet">
+  <link rel="preload" href="css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- JQuery -->
+  <!-- jQuery CDN https://code.jquery.com/ -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
+  <!-- Bootstrap tooltips -->
+  <!--script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script-->
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" defer></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js" defer></script>
+  <!-- https://swiperjs.com/ -->
+  <script src="https://unpkg.com/swiper/js/swiper.min.js" defer></script>
+  <!-- own scripts -->
+  <script type="text/javascript" src="js/youtube-api.min.js" defer></script>
+  <script type="text/javascript" src="js/scripts.min.js" defer></script>
 </head>
 
 <body data-spy="scroll" data-target="#navbar-header" class="position-relative">
@@ -153,13 +169,33 @@
               <!--Image-->
               <div class="swiper-container">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="assets/img/nikita-kachanovsky-bLY5JqP_Ldw-unsplash-landscape-min.jpg" alt="think outside the box" /></div>
-                  <div class="swiper-slide"><img src="assets/img/hal-gatewood-tZc3vjPCk-Q-unsplash-min.jpg" alt="concept on paper" /></div>
-                  <div class="swiper-slide"><img src="assets/img/helloquence-5fNmWej4tAA-unsplash-min.jpg" alt="working together on laptops" /></div>
-                  <div class="swiper-slide"><img src="assets/img/farzad-nazifi-p-xSl33Wxyc-unsplash-min.jpg" alt="code work setup all devices" /></div>
-                  <div class="swiper-slide"><img src="assets/img/sai-kiran-anagani-5Ntkpxqt54Y-unsplash-min.jpg" alt="code screen" /></div>
-                  <div class="swiper-slide"><img src="assets/img/igor-miske-JVSgcV8_vb4-unsplash-min.jpg" alt="website product-1" /></div>
-                  <div class="swiper-slide"><img src="assets/img/igor-miske-Px3iBXV-4TU-unsplash-min.jpg" alt="website product-2" /></div>
+                  <div class="swiper-slide">
+                    <img src="assets/img/nikita-kachanovsky-bLY5JqP_Ldw-unsplash-landscape-min.jpg" alt="think outside the box" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img data-src="assets/img/hal-gatewood-tZc3vjPCk-Q-unsplash-min.jpg" alt="concept on paper" class="swiper-lazy" />
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img data-src="assets/img/helloquence-5fNmWej4tAA-unsplash-min.jpg" alt="working together on laptops" class="swiper-lazy" />
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img data-src="assets/img/farzad-nazifi-p-xSl33Wxyc-unsplash-min.jpg" alt="code work setup all devices" class="swiper-lazy" />
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img data-src="assets/img/sai-kiran-anagani-5Ntkpxqt54Y-unsplash-min.jpg" alt="code screen" class="swiper-lazy" />
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img data-src="assets/img/igor-miske-JVSgcV8_vb4-unsplash-min.jpg" alt="website product-1" class="swiper-lazy" />
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img data-src="assets/img/igor-miske-Px3iBXV-4TU-unsplash-min.jpg" alt="website product-2" class="swiper-lazy" />
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
@@ -387,7 +423,7 @@
 
           <!--Contact wrapper-item-->
           <div class="col-lg-5 col-lg-5 p-0">
-            <iframe
+            <iframe title="googlemap"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2679.3695395763507!2d13.042881915826134!3d47.81305588168601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47769078f3c7634f%3A0xfb02fe56aad5409c!2sSalzburg!5e0!3m2!1sen!2sat!4v1574670389107!5m2!1sen!2sat"
               width="" height="" frameborder="0" style="border:0;" allowfullscreen="" id="map"></iframe>
           </div>
@@ -406,29 +442,13 @@
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">
-      <div class="">&copy; <span id="current-year"></span> Copyright | Coded with <a href="https://www.annabrunner.com/" target="_blank"><i class="fas fa-heart red-text mx-1"></i></a> by <a target="_blank"
-          href="https://dominicpranz.github.io/">Dominic Pranz</a></div>
+      <div class="">&copy; <span id="current-year"></span> Copyright | Coded with <a href="https://www.annabrunner.com/" target="_blank" rel="noopener noreferrer"><i class="fas fa-heart red-text mx-1"></i></a> by <a target="_blank"
+          href="https://dominicpranz.github.io/" rel="noopener noreferrer">Dominic Pranz</a></div>
     </div>
     <!-- Copyright -->
 
   </footer>
   <!-- Footer -->
-
-  <!-- JQuery -->
-  <!--script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script-->
-  <!-- jQuery CDN https://code.jquery.com/ -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
-  <!-- Bootstrap tooltips -->
-  <!--script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script-->
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" defer></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js" defer></script>
-  <!-- https://swiperjs.com/ -->
-  <script src="https://unpkg.com/swiper/js/swiper.min.js" async defer></script>
-  <!-- own scripts -->
-  <script type="text/javascript" src="js/youtube-api.min.js" async defer></script>
-  <script type="text/javascript" src="js/scripts.min.js" async defer></script>
 </body>
 
 </html>
