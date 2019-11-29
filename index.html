@@ -28,7 +28,7 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="navbar-header">
       <div class="container">
-        <a class="navbar-brand" href="#"><strong>YourBrand.com</strong></a>
+        <a class="navbar-brand" href="#"><strong><span class="">YourBrand</span>.com</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -53,11 +53,12 @@
     <!-- Navbar -->
     <!-- Full Page Intro -->
     <div class="full-page-intro view" style="">
-      <video loop muted autoplay poster="assets/img/blurry-lights.jpg" class="parallax-video">
-        <source src="assets/media/blurry-lights.mp4" type="video/mp4">
+      <video loop muted autoplay poster="assets/img/blurry-lights-purple.jpg" class="parallax-video">
+        <source src="assets/media/blurry-lights-purple.mp4" type="video/mp4">
+        <source src="assets/media/blurry-lights-purple.webm" type="video/webm">
       </video>
       <!-- Mask & flexbox options-->
-      <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+      <div class="full-page-intro__mask mask d-flex justify-content-center align-items-center">
         <a class="scroll-down-arrow" href="#about"></a>
         <!-- Content -->
         <div class="container">
@@ -86,200 +87,327 @@
   </header>
   <!-- Main navigation -->
 
-  <section class="main-section" id="about">
+  <div class="section-wrapper">
+    <section class="main-section" id="about">
 
-    <div class="about-wrapper">
-      <div class="row">
-        <div class="col-md-5 m-auto p-5">
+      <div class="section-container--about container">
+        <div class="row">
+          <div class="col-md-5 m-auto p-5">
 
-          <div class="view">
-            <img src="assets/svg/undraw_design_feedback_dexe.svg" class="img-fluid" alt="design feedback">
+            <div class="view">
+              <img src="assets/svg/undraw_design_feedback_dexe.svg" class="img-fluid" alt="design feedback">
+            </div>
+
           </div>
+          <div class="col-md-5 m-auto d-flex align-items-center dark-grey-text p-5">
+            <div>
+
+              <h3 class="font-weight-bold mb-4">We create designs that work for you</h3>
+
+              <p>Lorem ipsum dolor sit amet consectetur adip elit. Maiores deleniti explicabo voluptatem quisquam nulla asperiores aspernatur aperiam voluptate et consectetur minima delectus, fugiat eum soluta blanditiis adipisci, velit dolore
+                magnam.
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-5 m-auto d-flex align-items-center dark-grey-text p-5">
+            <div>
+
+              <h3 class="font-weight-bold mb-4">..and think outside of the box</h3>
+
+              <p>Lorem ipsum dolor sit amet consectetur adip elit. Maiores deleniti explicabo voluptatem quisquam nulla asperiores aspernatur aperiam voluptate et consectetur minima delectus, fugiat eum soluta blanditiis adipisci, velit dolore
+                magnam.
+              </p>
+
+            </div>
+          </div>
+          <div class="col-md-5 m-auto p-5">
+
+            <div class="view">
+              <img src="assets/svg/undraw_new_ideas_jdea.svg" class="img-fluid" alt="new ideas">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="px-md-5 py-5 text-center text-lg-left dark-grey-text">
+
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+
+            <!--Grid column-->
+            <div class="col-12 text-center">
+
+              <h3 class="font-weight-bold mb-4">From passion to the design to the finished product</h3>
+
+              <p class="mx-lg-5 mb-4">Lorem ipsum dolor sit amet consectetur adip elit. Maiores deleniti explicabo voluptatem quisquam nulla asperiores aspernatur aperiam voluptate et consectetur minima delectus, fugiat eum soluta blanditiis
+                adipisci,
+                velit
+                dolore
+                magnam.
+              </p>
+
+              <!--Image-->
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="assets/img/nikita-kachanovsky-bLY5JqP_Ldw-unsplash-landscape-min.jpg" alt="think outside the box" /></div>
+                  <div class="swiper-slide"><img src="assets/img/hal-gatewood-tZc3vjPCk-Q-unsplash-min.jpg" alt="concept on paper" /></div>
+                  <div class="swiper-slide"><img src="assets/img/helloquence-5fNmWej4tAA-unsplash-min.jpg" alt="working together on laptops" /></div>
+                  <div class="swiper-slide"><img src="assets/img/farzad-nazifi-p-xSl33Wxyc-unsplash-min.jpg" alt="code work setup all devices" /></div>
+                  <div class="swiper-slide"><img src="assets/img/sai-kiran-anagani-5Ntkpxqt54Y-unsplash-min.jpg" alt="code screen" /></div>
+                  <div class="swiper-slide"><img src="assets/img/igor-miske-JVSgcV8_vb4-unsplash-min.jpg" alt="website product-1" /></div>
+                  <div class="swiper-slide"><img src="assets/img/igor-miske-Px3iBXV-4TU-unsplash-min.jpg" alt="website product-2" /></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
 
         </div>
-        <div class="col-md-5 m-auto d-flex align-items-center dark-grey-text p-5">
-          <div>
 
-            <h3 class="font-weight-bold mb-4">We create designs that work for you</h3>
+      </div>
 
-            <p>Lorem ipsum dolor sit amet consectetur adip elit. Maiores deleniti explicabo voluptatem quisquam nulla asperiores aspernatur aperiam voluptate et consectetur minima delectus, fugiat eum soluta blanditiis adipisci, velit dolore magnam.
-            </p>
+    </section>
 
+    <section class="main-section" id="quote">
+      <div class="section-container--quote container-fluid py-5">
+        <div class="quote-text h1-responsive white-text text-center">
+          <span>You can't use up creativity.</span>
+          <span>The more you use, the more you have.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-section" id="projects">
+
+      <div class="section-container--projects container dark-grey-text">
+
+        <h3 class="font-weight-bold mb-4 pb-2 text-center">Our best projects</h3>
+        <p class="text-muted w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur veniam.
+        </p>
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-12 col-xl-3 mb-4">
+
+            <div class="view overlay rounded z-depth-1">
+              <img src="assets/img/project1.jpg" class="img-fluid" alt="Sample project image">
+              <a>
+                <div class="mask rgba-white-slight" data-toggle="modal" data-target="#productDetailsModal"></div>
+              </a>
+            </div>
+
+            <div class="px-3 pt-3 mx-1 mt-1 pb-0">
+              <h4 class="font-weight-bold mt-1 mb-3">Project 1</h4>
+              <p class="text-muted">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.</p>
+            </div>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 col-xl-3 col-md-4 mb-4">
+
+            <div class="view overlay rounded z-depth-1">
+              <img src="assets/img/project2.jpg" class="img-fluid" alt="Sample project image">
+              <a>
+                <div class="mask rgba-white-slight" data-toggle="modal" data-target="#productDetailsModal"></div>
+              </a>
+            </div>
+
+            <div class="px-3 pt-3 mx-1 mt-1 pb-0">
+              <h4 class="font-weight-bold mt-1 mb-3">Project 2</h4>
+              <p class="text-muted">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.</p>
+            </div>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+
+            <div class="view overlay rounded z-depth-1">
+              <img src="assets/img/project3.jpg" class="img-fluid" alt="Sample project image">
+              <a>
+                <div class="mask rgba-white-slight" data-toggle="modal" data-target="#productDetailsModal"></div>
+              </a>
+            </div>
+
+            <div class="px-3 pt-3 mx-1 mt-1 pb-0">
+              <h4 class="font-weight-bold mt-1 mb-3">Project 3</h4>
+              <p class="text-muted">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.</p>
+            </div>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+
+            <div class="view overlay rounded z-depth-1">
+              <img src="assets/img/project4.jpg" class="img-fluid" alt="Sample project image">
+              <a>
+                <div class="mask rgba-white-slight" data-toggle="modal" data-target="#productDetailsModal"></div>
+              </a>
+            </div>
+
+            <div class="px-3 pt-3 mx-1 mt-1 pb-0">
+              <h4 class="font-weight-bold mt-1 mb-3">Project 4</h4>
+              <p class="text-muted">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.</p>
+            </div>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade right" id="productDetailsModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalPreviewLabel">Project details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="assets/img/project-details.jpg" class="img-fluid" alt="Project Details">
+            <div class="modal-body">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eligendi facere officiis pariatur quos alias unde facilis tenetur. Nesciunt perferendis, ducimus quas error dolor. Autem praesentium saepe modi, eum expedita.
+            </div>
           </div>
         </div>
       </div>
+      <!-- Modal -->
 
-      <div class="row">
-        <div class="col-md-5 m-auto d-flex align-items-center dark-grey-text p-5">
-          <div>
+    </section>
 
-            <h3 class="font-weight-bold mb-4">..and think outside of the box</h3>
+    <section class="main-section" id="video">
 
-            <p>Lorem ipsum dolor sit amet consectetur adip elit. Maiores deleniti explicabo voluptatem quisquam nulla asperiores aspernatur aperiam voluptate et consectetur minima delectus, fugiat eum soluta blanditiis adipisci, velit dolore magnam.
-            </p>
+      <div class="section-container--video container">
+        <div id="player"></div>
+      </div>
+
+    </section>
+
+    <section class="main-section" id="contact">
+
+      <div class="section-container--contact container">
+
+        <!--Contact wrapper-->
+        <div class="row p-2 my-4">
+
+          <!--Contact wrapper-item-->
+          <div class="p-2 col-lg-5 mb-4 mb-lg-0">
+
+            <!--Section heading-->
+            <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+            <!--Section description-->
+            <p class="text-center w-responsive mx-auto mb-5">Do you have any questions?</p>
+
+            <form id="contact-form" name="contact-form" action="" method="">
+
+              <!--Grid row-->
+              <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input type="text" id="name" name="name" class="form-control" required>
+                    <label for="name">Your name</label>
+                  </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input type="email" id="email" name="email" class="form-control" required>
+                    <label for="email">Your email</label>
+                  </div>
+                </div>
+                <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+                <div class="col-12">
+
+                  <div class="md-form">
+                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                    <label for="message">Your message</label>
+                  </div>
+
+                </div>
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+                <div class="mx-auto mx-md-0 mb-4">
+                  <button type="submit" class="submit-button btn btn-primary"><i class="fas fa-paper-plane fa mr-2"></i>Send</button>
+                  <div class="submit-spinner spinner-grow text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                </div>
+                <div class="status"></div>
+              </div>
+              <!--Grid row-->
+
+              <p class="form-message"></p>
+
+            </form>
 
           </div>
-        </div>
-        <div class="col-md-5 m-auto p-5">
+          <!--Contact wrapper-item-->
 
-          <div class="view">
-            <img src="assets/svg/undraw_new_ideas_jdea.svg" class="img-fluid" alt="">
+          <!-- spacer item -->
+          <div class="col-lg-2 p-0 m-0"></div>
+
+          <!--Contact wrapper-item-->
+          <div class="col-lg-5 col-lg-5 p-0">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2679.3695395763507!2d13.042881915826134!3d47.81305588168601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47769078f3c7634f%3A0xfb02fe56aad5409c!2sSalzburg!5e0!3m2!1sen!2sat!4v1574670389107!5m2!1sen!2sat"
+              width="" height="" frameborder="0" style="border:0;" allowfullscreen="" id="map"></iframe>
           </div>
+          <!--Contact wrapper-item-->
 
         </div>
-      </div>
-    </div>
-
-  </section>
-
-  <section class="main-section" id="projects">
-
-    <div class="projects-wrapper px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
-
-      <!--Grid row-->
-      <div class="row d-flex justify-content-center">
-
-        <!--Grid column-->
-        <div class="col-lg-8 text-center">
-
-          <h3 class="font-weight-bold mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
-
-          <!--Image-->
-          <div class="view">
-            <div class="swiper-container" style="display:none;">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-              </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
-
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-
-              <!-- If we need scrollbar -->
-              <div class="swiper-scrollbar"></div>
-            </div>
-          </div>
-
-        </div>
-        <!--Grid column-->
+        <!--Contact wrapper-->
 
       </div>
-      <!--Grid row-->
 
-    </div>
-
-  </section>
-
-  <section class="main-section" id="video">
-
-    <!--video controls autoplay loop muted poster="" width="250">
-      <source src="assets/media/flower.mp4" type="video/mp4">
-      Sorry, your browser doesn't support embedded videos.
-    </video-->
-
-  </section>
-
-  <!--section class="main-section">
-
-
-  </section-->
-
-  <section class="main-section" id="contact">
-
-    <div class="row">
-      <!--Contact wrapper-->
-      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-stretch p-2 my-4 col-11 col-md-9 mx-auto">
-
-        <!--Contact wrapper-item-->
-        <div class="contact-wrapper__item p-2 col-lg-5 p-2 mb-4 mb-lg-0">
-
-          <!--Section heading-->
-          <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
-          <!--Section description-->
-          <p class="text-center w-responsive mx-auto mb-5">Do you have any questions?</p>
-
-          <form id="contact-form" name="contact-form" action="" method="">
-
-            <!--Grid row-->
-            <div class="row">
-
-              <!--Grid column-->
-              <div class="col-md-6">
-                <div class="md-form mb-0">
-                  <input type="text" id="name" name="name" class="form-control" required>
-                  <label for="name">Your name</label>
-                </div>
-              </div>
-              <!--Grid column-->
-
-              <!--Grid column-->
-              <div class="col-md-6">
-                <div class="md-form mb-0">
-                  <input type="email" id="email" name="email" class="form-control" required>
-                  <label for="email">Your email</label>
-                </div>
-              </div>
-              <!--Grid column-->
-
-            </div>
-            <!--Grid row-->
-
-            <!--Grid row-->
-            <div class="row">
-              <div class="col-12">
-
-                <div class="md-form">
-                  <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                  <label for="message">Your message</label>
-                </div>
-
-              </div>
-            </div>
-            <!--Grid row-->
-
-            <!--Grid row-->
-            <div class="row">
-              <div class="mx-auto mx-md-0 mb-4">
-                <button type="submit" class="submit-button btn btn-primary"><i class="fas fa-paper-plane fa mr-2"></i>Send</button>
-                <div class="submit-spinner spinner-grow text-primary" role="status">
-                  <span class="sr-only">Loading...</span>
-                </div>
-              </div>
-              <div class="status"></div>
-            </div>
-            <!--Grid row-->
-
-            <p class="form-message"></p>
-
-          </form>
-
-        </div>
-        <!--Contact wrapper-item-->
-
-        <!--Contact wrapper-item-->
-        <div class="contact-wrapper__item border col-12 col-lg-5 p-0">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2679.3695395763507!2d13.042881915826134!3d47.81305588168601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47769078f3c7634f%3A0xfb02fe56aad5409c!2sSalzburg!5e0!3m2!1sen!2sat!4v1574670389107!5m2!1sen!2sat"
-            width="" height="" frameborder="0" style="border:0;" allowfullscreen="" id="map"></iframe>
-        </div>
-        <!--Contact wrapper-item-->
-
-      </div>
-      <!--Contact wrapper-->
-    </div>
-
-  </section>
+    </section>
+  </div>
 
   <!-- Footer -->
   <footer class="page-footer font-small primary-color">
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">
-      <div class="">&copy; <span id="current-year"></span> Copyright | Coded with <i class="fas fa-heart red-text mx-1"></i> by <a target="_blank" href="https://dominicpranz.github.io/">Dominic Pranz</a></div>
+      <div class="">&copy; <span id="current-year"></span> Copyright | Coded with <a href="https://www.annabrunner.com/" target="_blank"><i class="fas fa-heart red-text mx-1"></i></a> by <a target="_blank"
+          href="https://dominicpranz.github.io/">Dominic Pranz</a></div>
     </div>
     <!-- Copyright -->
 
@@ -289,17 +417,18 @@
   <!-- JQuery -->
   <!--script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script-->
   <!-- jQuery CDN https://code.jquery.com/ -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
   <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!--script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script-->
   <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" defer></script>
   <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js" defer></script>
   <!-- https://swiperjs.com/ -->
-  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js" async defer></script>
   <!-- own scripts -->
-  <script type="text/javascript" src="js/scripts.min.js"></script>
+  <script type="text/javascript" src="js/youtube-api.min.js" async defer></script>
+  <script type="text/javascript" src="js/scripts.min.js" async defer></script>
 </body>
 
 </html>

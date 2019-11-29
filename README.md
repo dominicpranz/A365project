@@ -7,7 +7,10 @@ Ressources used
 
 - https://mdbootstrap.com/
 - https://slidesjs.com/
+- https://coverr.co/
 - https://undraw.co/
+- https://unsplash.com/
+- https://compressjpeg.com/
 
 One-Page Website
 

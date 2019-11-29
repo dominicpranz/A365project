@@ -8,7 +8,7 @@ $answer = [
   'message' => "Sorry, something went wrong.", // error message for the user
 ];
 
-//sleep(3);
+// sleep(3); // test loading icon on form
 
 try {
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {

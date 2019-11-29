@@ -66,6 +66,16 @@ $(document).ready(function() {
   let currentYear = new Date().getFullYear();
   $('#current-year').text(currentYear);
 
+  //scrollspy to start css Animation
+  $(document).on('scroll', function() {
+    let quoteOffset = 500;
+    let animationDone = false;
+    if (!animationDone && $(this).scrollTop() >= $('.quote-text').position().top - quoteOffset) {
+      $('.quote-text').addClass('quote-text--animation');
+      animationDone = true;
+    }
+  })
+
   // handle form submission
   $('#contact-form').submit((e) => {
     e.preventDefault();
@@ -87,7 +97,7 @@ $(document).ready(function() {
     });
 
     jqxhr.done((data) => {
-      console.log(data);
+      // console.log(data);
       let dataObj = isJsonString(data) ? JSON.parse(data) : null;
       if (dataObj && 'code' in dataObj && 'message' in dataObj) {
         let hasError = (dataObj['code'] !== 200);
@@ -132,6 +142,5 @@ $(document).ready(function() {
       formMessageEl.removeClass('text-warning');
     }
   }
-
 
 });
