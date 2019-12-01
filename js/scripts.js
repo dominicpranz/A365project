@@ -7,10 +7,10 @@ $(document).ready(function() {
     speed: 900,
     spaceBetween: 100,
     // Disable preloading of all images
-    preloadImages: false,
+    preloadImages: true,
     // Enable lazy loading
-    lazy: true,
-    loadOnTransitionStart: true,
+    //lazy: true,
+    //loadOnTransitionStart: true,
 
     // Optional parameters
     direction: 'horizontal',
@@ -56,6 +56,7 @@ $(document).ready(function() {
         if (!element) return; // break if element doesn't exist to prevent a js error
         let elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
         let headerHeight = 50; // normally document.querySelector("nav.navbar").offsetHeight but our header changes height so we use a fixed value
+        headerHeight = 0; // bootstrap scrollspy highlights don't work with a header offset. write own scrollspy to use this again. for now we have enough whitespace anyways
         offsetPosition = elementPosition - headerHeight; // take header height into account
       }
 
