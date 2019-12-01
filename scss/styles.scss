@@ -1,6 +1,13 @@
 /* styles */
 //import fonts
-@import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap'); // change breakpoints here
+//@import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap'); // change breakpoints here
+@font-face {
+  font-family: 'Sacramento';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/Sacramento-Regular.ttf") format('truetype'),;
+}
 // https://mdbootstrap.com/docs/jquery/layout/media-queries/
 /*$grid-breakpoints: (
   xs: 0,
@@ -36,16 +43,14 @@ html {
   box-sizing: border-box;
 }
 
-body {}
+body {
+  background-color: #000; // while stuff is loading
+}
 // full height
+
 .full-page-intro,
-body,
-header,
-html {
+header {
   height: 100vh;
-  @include media-breakpoint-up(sm) {
-    height: 100%;
-  }
 }
 // fix negative margin of the row class from bootstrap or mdbootstrap
 
@@ -59,8 +64,8 @@ header {
     overflow: hidden;
 
     &__mask {
-      $mask-bg-color: #7a7a7a; // you can tint the bg here
-      //background-color: rgba($mask-bg-color, .3);
+      $mask-bg-color: #000; // you can tint the bg here
+      background-color: rgba($mask-bg-color, .3);
     }
 
     .parallax-video {
@@ -76,7 +81,7 @@ header {
     }
 
     .background-below {
-      background-color: green;
+      background-color: #000;
       position: absolute;
       z-index: 2;
       top: 50vh;
@@ -419,7 +424,10 @@ footer {
 
 .scroll-down-arrow {
   position: absolute;
-  bottom: 30px;
+  bottom: 10px;
+  @include media-breakpoint-up(md) {
+    bottom: 30px;
+  }
   left: 50%;
   margin-left: -16px;
   display: block;
